@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/fleet_log_request.json",
+  "title": "Fleet Log Request",
+  "description": "Request the event log for a fleet",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a fleet log request",
+      "type": "string",
+      "enum": ["fleet_log_request"]
+    },
+    "fleet": {
+      "description": "Specify the name of the fleet whose log should be fetched",
+      "type": "string"
+    }
+  },
+  "required": ["type", "fleet"]
+}

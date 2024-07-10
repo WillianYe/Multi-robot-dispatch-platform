@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/kill_task_request.json",
+  "title": "Task Kill Request",
+  "description": "Ask for a task to be killed. This should be a last resort if a task cancel request is inadequate.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a task kill request",
+      "type": "string",
+      "enum": ["kill_task_request"]
+    },
+    "task_id": {
+      "description": "Specify the task ID to kill",
+      "type": "string"
+    },
+    "labels": {
+      "description": "Labels to describe the purpose of the kill",
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["type", "task_id"]
+}

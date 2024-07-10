@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/task_request.json",
+  "title": "Task Request",
+  "description": "Describe a task request",
+  "type": "object",
+  "properties": {
+    "unix_millis_earliest_start_time": {
+      "description": "(Optional) The earliest time that this task may start",
+      "type": "integer"
+    },
+    "priority": {
+      "description": "(Optional) The priority of this task. This must match a priority schema supported by a fleet.",
+      "type": "object"
+    },
+    "category": { "type": "string" },
+    "description": {
+      "description": "A description of the task. This must match a schema supported by a fleet for the category of this task request."
+    },
+    "labels": {
+      "description": "Labels to describe the purpose of the task dispatch request",
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["category", "description"]
+}

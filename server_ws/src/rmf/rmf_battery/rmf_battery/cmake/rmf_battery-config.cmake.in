@@ -1,0 +1,18 @@
+@PACKAGE_INIT@
+
+get_filename_component(rmf_battery_CMAKE_DIR "${CMAKE_CURRENT_LIST_FILE}" PATH)
+
+include(CMakeFindDependencyMacro)
+
+find_dependency(rmf_utils)
+find_dependency(rmf_traffic)
+find_dependency(eigen3_cmake_module)
+find_dependency(Eigen3)
+
+if(NOT TARGET rmf_battery::rmf_battery)
+    include("${rmf_battery_CMAKE_DIR}/rmf_battery-targets.cmake")
+endif()
+
+list(APPEND rmf_traffic_INCLUDE_DIRS ${Eigen3_INCLUDE_DIRS})
+
+check_required_components(rmf_battery)

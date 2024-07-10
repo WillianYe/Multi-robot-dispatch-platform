@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/rewind_task_response.json",
+  "title": "Task Rewind Response",
+  "description": "Response to a request to rewind a task",
+  "$ref": "simple_response.json"
+}

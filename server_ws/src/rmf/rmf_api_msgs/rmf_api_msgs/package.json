@@ -1,0 +1,30 @@
+{
+  "name": "rmf_api_msgs",
+  "version": "0.1",
+  "description": "package consists of definition of rmf api msgs",
+  "private": true,
+  "scripts": {},
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/open-rmf/rmf_api_msgs.git"
+  },
+  "keywords": [
+    "rmf_api_msgs"
+  ],
+  "contributors": [
+    {
+      "name": "Grey",
+      "email": "grey@openrobotics.org"
+    },
+    {
+      "name": "You Liang",
+      "email": "youliang@openrobotics.org"
+    }
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/open-rmf/rmf_api_msgs/issues"
+  },
+  "homepage": "https://github.com/open-rmf/rmf_api_msgs#readme"
+}

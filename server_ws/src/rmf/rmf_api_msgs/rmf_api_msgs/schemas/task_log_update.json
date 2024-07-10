@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/task_log_update.json",
+  "title": "Task Event Log Update",
+  "description": "Update for the log of a task. These new entries should be added to any log entries that already existed for each event, ignoring any with a duplicate `seq` value.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is an event log update",
+      "type": "string",
+      "enum": ["task_log_update"]
+    },
+    "data": { "$ref": "task_log.json" }
+  },
+  "required": ["type", "data"]
+}

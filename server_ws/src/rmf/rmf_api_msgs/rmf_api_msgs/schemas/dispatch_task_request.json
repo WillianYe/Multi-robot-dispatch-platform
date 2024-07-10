@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/dispatch_task_request.json",
+  "title": "Dispatch Task Request",
+  "description": "Request that a task be dispatched to the best available fleet",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a task dispatch request",
+      "type": "string",
+      "enum": ["dispatch_task_request"]
+    },
+    "request": { "$ref": "task_request.json" }
+  },
+  "required": ["type", "request"]
+}

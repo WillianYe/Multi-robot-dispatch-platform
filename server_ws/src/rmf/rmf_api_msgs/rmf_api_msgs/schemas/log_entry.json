@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/log_entry.json",
+  "title": "Log Entry",
+  "description": "An entry in the log of an event",
+  "type": "object",
+  "properties": {
+    "seq": {
+      "description": "Sequence number for this entry. Each entry has a unique sequence number which monotonically increase, until integer overflow causes a wrap around.",
+      "type": "integer",
+      "minimum": 0,
+      "exclusiveMaximum": 4294967296
+    },
+    "tier": {
+      "description": "The importance level of the log entry",
+      "type": "string",
+      "enum": ["uninitialized", "info", "warning", "error"]
+    },
+    "unix_millis_time": { "type": "integer" },
+    "text": {
+      "description": "The text of the log entry",
+      "type": "string"
+    }
+  },
+  "required": ["seq", "tier", "unix_millis_time", "text"]
+}

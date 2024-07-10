@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/fleet_state.json",
+  "title": "Fleet State",
+  "description": "The state of a fleet",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "robots": {
+      "description": "A dictionary of the states of the robots that belong to this fleet",
+      "type": "object",
+      "additionalProperties": { "$ref": "robot_state.json" }
+    }
+  }
+}

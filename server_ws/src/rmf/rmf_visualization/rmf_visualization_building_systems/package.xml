@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rmf_visualization_building_systems</name>
+  <version>2.0.0</version>
+  <description>A visualizer for doors and lifts</description>
+  <maintainer email="yadunund@openrobotics.org">Yadunund</maintainer>
+  <maintainer email="marco@openrobotics.org">Marco A. Gutiérrez</maintainer>
+  <license>Apache License 2.0</license>
+
+  <depend>rmf_lift_msgs</depend>
+  <depend>rmf_door_msgs</depend>
+  <depend>rmf_building_map_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>rmf_visualization_msgs</depend>
+
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

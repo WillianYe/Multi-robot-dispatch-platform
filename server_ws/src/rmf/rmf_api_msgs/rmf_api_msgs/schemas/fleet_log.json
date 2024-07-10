@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/fleet_log.json",
+  "title": "Fleet Log",
+  "description": "The log of a fleet",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "log": {
+      "description": "Log for the overall fleet",
+      "type": "array",
+      "items": { "$ref": "log_entry.json" }
+    },
+    "robots": {
+      "description": "Dictionary of logs for the individual robots. The keys (property names) are the robot names.",
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": { "$ref": "log_entry.json" }
+      }
+    }
+  }
+}

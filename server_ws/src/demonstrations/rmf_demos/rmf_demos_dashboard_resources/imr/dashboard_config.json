@@ -1,0 +1,24 @@
+{
+  "world_name" : "imr World",  
+  "valid_task": ["Loop"],
+  "task": {
+    "Delivery": {
+    },
+    "Loop": {
+      "places": [
+        "robot1_start",
+        "robot1_end",
+        "robot2_start",
+        "robot2_end"
+      ]
+    },
+    "Clean": {
+    },
+    "Station": {
+    },
+    "Patrol": {
+    },
+    "Charging": {
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/transformation_2D.json",
+  "title": "Transformation 2D",
+  "description": "Transformation between 2 maps",
+  "type": "object",
+  "properties": {
+    "target_map": { "type": "string" },
+    "ref_map": { "type": "string" },
+    "x": { "type": "number" },
+    "y": { "type": "number" },
+    "yaw": { "type": "number" },
+    "scale": { "type": "number" }
+  },
+  "required": ["target_map", "ref_map", "x", "y", "yaw", "scale"]
+}

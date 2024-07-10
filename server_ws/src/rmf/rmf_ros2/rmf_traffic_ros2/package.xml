@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rmf_traffic_ros2</name>
+  <version>2.1.2</version>
+  <description>A package containing messages used by the RMF traffic management system.</description>
+  <maintainer email="grey@openrobotics.org">Grey</maintainer>
+  <maintainer email="marco@openrobotics.org">Marco A. Gutiérrez</maintainer>
+  <license>Apache License 2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rmf_utils</depend>
+  <depend>rmf_traffic</depend>
+  <depend>rmf_traffic_msgs</depend>
+  <depend>rmf_fleet_msgs</depend>
+  <depend>rmf_site_map_msgs</depend>
+  <depend>rmf_building_map_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>yaml-cpp</depend>
+  <depend>nlohmann-json-dev</depend>
+  <depend>proj</depend>
+  <depend>zlib</depend>
+
+  <build_depend>uuid</build_depend>
+  <exec_depend>uuid</exec_depend>
+
+  <build_depend>eigen</build_depend>
+
+  <test_depend>ament_cmake_catch2</test_depend>
+  <test_depend>ament_cmake_uncrustify</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+

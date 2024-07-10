@@ -1,0 +1,50 @@
+{
+  "world_name" : "House",  
+  "valid_task": ["Delivery", "Loop"],
+  "task": {
+    "Delivery": {
+      "option": {
+        "coke1": {
+          "pickup_place_name": "coke1_pickup",
+          "pickup_dispenser": "coke1_dispenser",
+          "dropoff_place_name": "coke1_dropoff",
+          "dropoff_ingestor": "coke1_ingestor"
+        },
+        "coke2": {
+          "pickup_place_name": "coke2_pickup",
+          "pickup_dispenser": "coke2_dispenser",
+          "dropoff_place_name": "coke2_dropoff",
+          "dropoff_ingestor": "coke2_ingestor"
+        },
+        "coke3": {
+          "pickup_place_name": "coke3_pickup",
+          "pickup_dispenser": "coke3_dispenser",
+          "dropoff_place_name": "coke3_dropoff",
+          "dropoff_ingestor": "coke3_ingestor"
+        }
+      }
+    },
+    "Loop": {
+      "places": [
+        "loop1",
+        "tb3_0_start",
+        "tb3_1_start",
+        "tb3_2_start",
+        "coke1_pickup",
+        "coke1_dropoff",
+        "coke2_pickup",
+        "coke2_dropoff",
+        "coke3_pickup",
+        "coke3_dropoff"
+      ]
+    },
+    "Clean": {
+    },
+    "Station": {
+    },
+    "Patrol": {
+    },
+    "Charging": {
+    }
+  }
+}

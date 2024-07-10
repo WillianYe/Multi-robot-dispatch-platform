@@ -1,0 +1,14 @@
+@PACKAGE_INIT@
+
+set(rmf_api_msgs_CMAKE_DIR "${CMAKE_CURRENT_LIST_DIR}")
+
+include(CMakeFindDependencyMacro)
+
+find_dependency(nlohmann_json)
+
+if(NOT TARGET rmf_api_msgs::rmf_api_msgs)
+  include(${rmf_api_msgs_CMAKE_DIR}/rmf_api_msgs-targets.cmake)
+endif()
+
+include(${rmf_api_msgs_CMAKE_DIR}/rmf_api_generate_schema_headers.cmake)
+set(RMF_API_GENERATE_SCHEMA_TEMPLATE ${rmf_api_msgs_CMAKE_DIR}/schemas_template.hpp.in)

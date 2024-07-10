@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/task_discovery_update.json",
+  "title": "Task Discovery",
+  "description": "Discovered information about what kinds of tasks a fleet supports",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is an task discovery update",
+      "type": "string",
+      "enum": ["task_discovery_update"]
+    },
+    "data": {
+      "type": "object",
+      "properties": {
+        "fleet_name": {
+          "description": "Name of the fleet that supports these tasks",
+          "type": "string"
+        },
+        "tasks": {
+          "description": "(list:replace) List of tasks that the fleet supports",
+          "type": "array",
+          "items": { "$ref": "#/$defs/task" }
+        }
+      }
+    }
+  },
+  "required": ["type", "data"],
+  "$defs": {
+    "task": {
+      "description": "Information about a task",
+      "type": "object",
+      "properties": {
+        "category": {
+          "description": "The category of this task. There must not be any duplicate task categories per fleet.",
+          "type": "string"
+        },
+        "detail": {
+          "description": "Details about the behavior of the task.",
+          "type": "string"
+        },
+        "description_schema": {
+          "description": "The schema for this task description",
+          "type": "object"
+        }
+      },
+      "required": ["category", "detail", "schema"]
+    }
+  }
+}

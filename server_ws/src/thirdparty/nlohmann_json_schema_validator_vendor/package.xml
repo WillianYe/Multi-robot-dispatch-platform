@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="2">
+  <name>nlohmann_json_schema_validator_vendor</name>
+  <version>0.2.4</version>
+  <description>A vendor package for JSON schema validator for JSON for Modern C++</description>
+  <maintainer email="grey@openrobotics.org">Grey</maintainer>
+  <license>Apache License 2.0</license> <!-- the contents of this package are Apache 2.0 -->
+  <license>MIT License</license> <!-- nlohmann json schema validator is MIT License -->
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <buildtool_depend>git</buildtool_depend>
+
+  <depend>nlohmann-json-dev</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

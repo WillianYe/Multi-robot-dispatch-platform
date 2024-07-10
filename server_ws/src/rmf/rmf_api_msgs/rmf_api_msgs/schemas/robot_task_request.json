@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/robot_task_request.json",
+  "title": "Robot Task Request",
+  "description": "Request to be directly assigned to a specific robot",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a task dispatch request",
+      "type": "string",
+      "constant": "robot_task_request"
+    },
+    "robot": {
+      "description": "The name of the robot",
+      "type": "string"
+    },
+    "fleet": {
+      "description": "The fleet the robot belongs to",
+      "type": "string"
+    },
+    "request": { "$ref": "task_request.json" }
+  },
+  "required": ["type", "robot", "fleet", "request"]
+}

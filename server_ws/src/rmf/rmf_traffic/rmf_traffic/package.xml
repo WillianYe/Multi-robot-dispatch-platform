@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rmf_traffic</name>
+  <version>3.0.0</version>
+  <description>Package for managing traffic in the Robotics Middleware Framework</description>
+  <maintainer email="grey@openrobotics.org">Grey</maintainer>
+  <maintainer email="marco@openrobotics.org">Marco A. Gutiérrez</maintainer>
+  <license>Apache License 2.0</license>
+  <author>Grey</author>
+
+  <buildtool_depend>cmake</buildtool_depend>
+  <buildtool_depend>eigen3_cmake_module</buildtool_depend>
+
+  <build_depend>eigen</build_depend>
+  <build_depend>rmf_utils</build_depend>
+
+  <buildtool_export_depend>eigen3_cmake_module</buildtool_export_depend>
+  <build_export_depend>eigen</build_export_depend>
+  <build_export_depend>rmf_utils</build_export_depend>
+
+  <depend>libccd-dev</depend>
+  <!-- Note: We require fcl-0.6 or greater. A copy of fcl-0.6 is provided
+       in-source in case the user is missing it. If you want to build
+       rmf_traffic against a different version of fcl>=0.6 that is in your
+       workspace, then uncomment the line below -->
+  <!--<depend>fcl</depend>-->
+
+  <test_depend>ament_cmake_catch2</test_depend>
+  <test_depend>ament_cmake_uncrustify</test_depend>
+
+
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>

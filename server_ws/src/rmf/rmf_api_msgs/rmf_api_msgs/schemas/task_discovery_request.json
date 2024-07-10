@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/task_discovery_request.json",
+  "title": "Task Discovery Request",
+  "description": "Ask for tasks that can be performed by the fleets",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a task discovery request",
+      "type": "string",
+      "enum": ["task_discovery_request"]
+    }
+  },
+  "required": ["type"]
+}

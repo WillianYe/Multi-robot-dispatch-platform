@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/robot_state.json",
+  "title": "Robot State",
+  "description": "The state of a robot",
+  "type": "object",
+  "properties": {
+    "name": { "type": "string" },
+    "status": {
+      "description": "A simple token representing the status of the robot",
+      "type": "string",
+      "enum": ["uninitialized", "offline", "shutdown", "idle", "charging", "working", "error"]
+    },
+    "task_id": {
+      "description": "The ID of the task this robot is currently working on. Empty string if the robot is not working on a task.",
+      "type": "string"
+    },
+    "unix_millis_time": { "type": "integer" },
+    "location": { "$ref": "location_2D.json" },
+    "battery": {
+      "description": "State of charge of the battery. Values range from 0.0 (depleted) to 1.0 (fully charged)",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "issues": {
+      "description": "A list of issues with the robot that operators need to address",
+      "type": "array",
+      "items": { "$ref": "#/$defs/issue" }
+    }
+  },
+  "$defs": {
+    "issue": {
+      "description": "An issue that an operator needs to respond to (e.g. stuck, lost)",
+      "type": "object",
+      "properties": {
+        "category": {
+          "description": "Category of the robot's issue",
+          "type": "string"
+        },
+        "detail": {
+          "description": "Detailed information about the issue",
+          "anyOf": [
+            { "type": "object" },
+            { "type": "array" },
+            { "type": "string" }
+          ]
+        }
+      }
+    }
+  }
+}

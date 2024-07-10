@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/fleet_state_update.json",
+  "title": "Fleet State Update",
+  "description": "Update for the state of a fleet",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a fleet state update",
+      "type": "string",
+      "enum": ["fleet_state_update"]
+    },
+    "data": {
+      "$ref": "fleet_state.json"
+    }
+  },
+  "required": ["type", "data"]
+}

@@ -1,0 +1,16 @@
+#!/usr/bin/env python3
+###############################################################################
+# This python module is a self generated script from 
+# rmf_api_msgs/scripts/schemas_template.jinja2
+
+import os
+
+{% for name in schemas_dict -%}
+###############################################################################
+# @Brief: Function to get {{ name }} json schema
+# @return: json schema, in raw string
+def {{ name }}():
+    return r"""
+{{ schemas_dict[name] }}"""
+
+{% endfor %}

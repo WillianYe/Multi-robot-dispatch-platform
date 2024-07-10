@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/error.json",
+  "title": "Error",
+  "description": "Description of an error that has occurred while handling a request",
+  "type": "object",
+  "properties": {
+    "code": {
+      "description": "A standard code for the kind of error that has occurred",
+      "type": "integer",
+      "minimum": 0
+    },
+    "category": {
+      "description": "The category of the error",
+      "type": "string"
+    },
+    "detail": {
+      "description": "Details about the error",
+      "type": "string"
+    }
+  }
+}

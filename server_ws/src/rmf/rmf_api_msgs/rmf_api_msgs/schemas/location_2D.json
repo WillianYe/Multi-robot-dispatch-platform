@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/location_2D.json",
+  "title": "Location 2D",
+  "description": "A robot's location using 2D coordinates",
+  "type": "object",
+  "properties": {
+    "map": { "type": "string" },
+    "x": { "type": "number" },
+    "y": { "type": "number" },
+    "yaw": { "type": "number" }
+  },
+  "required": ["map", "x", "y", "yaw"]
+}

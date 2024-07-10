@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/skip_phase_request.json",
+  "title": "Task Phase Skip Request",
+  "description": "Ask for a phase to be skipped.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a phase skip request",
+      "type": "string",
+      "enum": ["skip_phase_request"]
+    },
+    "task_id": {
+      "description": "Specify the task ID whose phase should be skipped",
+      "type": "string"
+    },
+    "phase_id": {
+      "description": "Specify the phase that should be skipped",
+      "type": "integer",
+      "minimum": 0
+    },
+    "labels": {
+      "description": "Labels to describe the purpose of the skip",
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["type", "task_id", "phase_id"]
+}

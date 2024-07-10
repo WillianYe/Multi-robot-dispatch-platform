@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>menge_vendor</name>
+  <version>1.0.0</version>
+  <description>Menge is a powerful, cross-platform, modular framework for crowd simulation developed at the University of North Carolina - Chapel Hill. This package includes the core simulation part of origin menge package, with a bit modification for crowd simulation in gazebo and ignition gazebo.
+  </description>
+  <maintainer email="fredshao@openrobotics.org">Shao Guoliang</maintainer>
+  <license>Apache 2.0</license>
+
+  <build_depend>pkg-config</build_depend>
+
+  <depend>tinyxml</depend>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+</package>

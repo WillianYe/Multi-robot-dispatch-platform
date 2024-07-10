@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/task_log_request.json",
+  "title": "Task Log Request",
+  "description": "Request the event log for a task",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a task log request",
+      "type": "string",
+      "enum": ["task_log_request"]
+    },
+    "task_id": {
+      "description": "Specify the ID of the task whose log should be fetched",
+      "type": "string"
+    }
+  },
+  "required": ["type", "task_id"]
+}

@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/rewind_task_request.json",
+  "title": "Task Rewind Request",
+  "description": "Ask for a task to rewind itself to an earlier phase.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a task rewind request",
+      "type": "string",
+      "enum": ["rewind_task_request"]
+    },
+    "task_id": {
+      "description": "Specify the ID of the task that should rewind",
+      "type": "string"
+    },
+    "phase_id": {
+      "description": "Specify the phase that should be rewound to. The task will restart at the beginning of this phase.",
+      "type": "integer",
+      "minimum": 0
+    }
+  },
+  "required": ["type", "task_id", "phase_id"]
+}

@@ -1,0 +1,19 @@
+# Submit Task | POST service call
+
+# Identifier for who is requesting the service
+string requester
+
+# desciption of task
+TaskDescription description
+
+---
+
+# Confirmation that this service call is processed
+bool success
+
+# generated task ID by dispatcher node
+string task_id
+
+# This will provide a verbose message regarding task submission
+string message
+

@@ -1,0 +1,30 @@
+{
+  "world_name" : "Hospital",  
+  "valid_task": ["Loop"],
+  "task": {
+    "Delivery": {
+    },
+    "Loop": {
+      "places": [
+        "robot1_start",
+        "robot1_end",
+        "robot2_start",
+        "robot2_end",
+        "robot3_start",
+        "robot3_end",
+        "robot4_start",
+        "robot4_end",
+        "robot5_start",
+        "robot5_end" 
+      ]
+    },
+    "Clean": {
+    },
+    "Station": {
+    },
+    "Patrol": {
+    },
+    "Charging": {
+    }
+  }
+}

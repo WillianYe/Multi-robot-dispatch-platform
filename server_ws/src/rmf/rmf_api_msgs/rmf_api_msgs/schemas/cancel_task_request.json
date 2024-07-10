@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/cancel_task_request.json",
+  "title": "Cancel Task Request",
+  "description": "Ask for a task to be canceled.",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a task cancellation request",
+      "type": "string",
+      "enum": ["cancel_task_request"]
+    },
+    "task_id": {
+      "description": "Specify the task ID to cancel",
+      "type": "string"
+    },
+    "labels": {
+      "description": "Labels to describe the purpose of the cancellation",
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "required": ["type", "task_id"]
+}

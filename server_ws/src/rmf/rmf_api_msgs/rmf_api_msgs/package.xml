@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>rmf_api_msgs</name>
+  <version>0.0.1</version>
+  <description>RMF API msgs definition</description>
+  <maintainer email="grey@openrobotics.org">Grey</maintainer>
+  <maintainer email="youliang@openrobotics.org">You Liang</maintainer>
+  <license>Apache License 2.0</license>
+
+  <depend>nlohmann-json-dev</depend>
+  <depend>python3-jinja2</depend>
+  <depend>python3-jsonschema</depend>
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+<!--<exec_depend>python3-pydantic</exec_depend>-->
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

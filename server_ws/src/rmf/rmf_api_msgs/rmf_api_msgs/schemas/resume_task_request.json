@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/resume_task_request.json",
+  "title": "Task Resume Request",
+  "description": "This can be used to discard task interruption requests. When all interruption requests for a task are discarded, the task will resume.",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a task resuming request",
+      "type": "string",
+      "enum": ["resume_task_request"]
+    },
+    "for_task": {
+      "description": "Specify task ID to resume.",
+      "type": "string"
+    },
+    "for_tokens": {
+      "description": "A list of tokens of interruption requests which should be resumed. The interruption request associated with each token will be discarded.",
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "labels": {
+      "description": "Labels describing this request",
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "require": ["type", "for_task", "for_tokens"]
+}

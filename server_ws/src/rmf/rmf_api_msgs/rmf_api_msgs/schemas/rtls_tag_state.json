@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/rtls_tag_state.json",
+  "title": "Rtls Tag State",
+  "description": "The state of a realtime location system tag",
+  "type": "object",
+  "properties": {
+    "tag_id": {
+      "description": "The ID of the rtls tag.",
+      "type": "string"
+    },
+    "status": {
+      "description": "A simple token representing the status of the tag",
+      "type": "string",
+      "enum": ["uninitialized", "offline", "shutdown", "idle", "charging", "working", "error"]
+    },
+    "location_type": {
+      "description": "The type location information provided by the tag.",
+      "type": "string",
+      "enum": ["zone", "coord"]
+    },
+    "asset_type": {
+      "description": "The type of the tagged asset.",
+      "type": "object",
+      "properties": {
+        "asset_type": {
+          "description": "type of the asset",
+          "type": "string"
+        },
+        "asset_subtype": {
+          "description": "subtype of the asset",
+          "type": "string"
+        }
+      },
+      "required": ["type", "subtype"]
+    },
+    "unix_millis_time": { "type": "integer" },
+    "location": { "$ref": "location_2D.json" },
+    "battery": {
+      "description": "State of charge of the battery. Values range from 0.0 (depleted) to 1.0 (fully charged)",
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0
+    },
+    "issues": {
+      "description": "A list of issues with the tag that operators need to address",
+      "type": "array",
+      "items": { "$ref": "#/$defs/issue" }
+    }
+  },
+  "required": ["tag_id"],
+  "$defs": {
+    "issue": {
+      "description": "An issue that an operator needs to respond to (e.g. disconnection, lost)",
+      "type": "object",
+      "properties": {
+        "category": {
+          "description": "Category of the tag's issue",
+          "type": "string"
+        },
+        "detail": {
+          "description": "Detailed information about the issue",
+          "anyOf": [
+            { "type": "object" },
+            { "type": "array" },
+            { "type": "string" }
+          ]
+        }
+      }
+    }
+  }
+}

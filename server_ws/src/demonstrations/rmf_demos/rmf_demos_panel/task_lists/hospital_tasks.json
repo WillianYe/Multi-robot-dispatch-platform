@@ -1,0 +1,7 @@
+[
+{"task_type":"Loop", "start_time":0, "priority":0, "description": {"num_loops":1, "start_name":"robot1_start", "finish_name":"robot1_end"}},
+{"task_type":"Loop", "start_time":0, "priority":0, "description": {"num_loops":1, "start_name":"robot2_start", "finish_name":"robot2_end"}},
+{"task_type":"Loop", "start_time":0, "priority":0, "description": {"num_loops":1, "start_name":"robot3_start", "finish_name":"robot3_end"}},
+{"task_type":"Loop", "start_time":0, "priority":0, "description": {"num_loops":1, "start_name":"robot4_start", "finish_name":"robot4_end"}},
+{"task_type":"Loop", "start_time":0, "priority":0, "description": {"num_loops":1, "start_name":"robot5_start", "finish_name":"robot5_end"}}
+]

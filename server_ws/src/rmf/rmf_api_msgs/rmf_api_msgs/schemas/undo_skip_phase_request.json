@@ -1,0 +1,30 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/undo_phase_skip_request.json",
+  "title": "Undo Phase Skip Request",
+  "description": "This can be used to discard phase skip requests. When all phase skip requests for a phase are discarded, the phase will not be skipped.",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is a request to undo a phase skip request",
+      "type": "string",
+      "enum": ["undo_phase_skip_request"]
+    },
+    "for_task": {
+      "description": "Specify the relevant task ID",
+      "type": "string"
+    },
+    "for_tokens": {
+      "description": "A list of the tokens of skip requests which should be undone. The skips associated with each token will be discarded.",
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "labels": {
+      "description": "Labels describing this request",
+      "type": "array",
+      "items": { "type": "string" }
+    }
+  },
+  "require": ["type", "for_task", "for_tokens"]
+}

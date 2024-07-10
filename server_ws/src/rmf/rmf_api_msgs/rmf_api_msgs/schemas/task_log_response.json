@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/task_log_response.json",
+  "title": "Task Log Response",
+  "description": "Responding to a task log request",
+  "type": "object",
+  "oneOf": [
+    {
+      "properties": {
+        "success": { "$ref": "#/$defs/success" },
+        "data": { "$ref": "task_log.json" }
+      },
+      "required": ["success", "data"]
+    },
+    {
+      "properties": {
+        "success": { "$ref": "#/$defs/failure" },
+        "errors": {
+          "description": "Any error messages explaining why the request failed",
+          "type": "array",
+          "items": { "$ref": "error.json" }
+        }
+      },
+      "required": ["success", "errors"]
+    }
+  ],
+  "$defs": {
+    "success": {
+      "description": "The request was successful",
+      "type": "boolean",
+      "enum": [true]
+    },
+    "failure": {
+      "description": "The request failed",
+      "type": "boolean",
+      "enum": [false]
+    }
+  }
+}

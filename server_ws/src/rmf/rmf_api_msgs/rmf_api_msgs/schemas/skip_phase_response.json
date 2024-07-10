@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/skip_phase_response.json",
+  "title": "Skip Phase Response",
+  "description": "Response to a request for a phase to be skipped",
+  "$ref": "token_response.json"
+}

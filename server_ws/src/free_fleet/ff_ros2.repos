@@ -1,0 +1,5 @@
+repositories:
+  free_fleet:
+    type: git
+    url: https://github.com/open-rmf/free_fleet.git
+    version: main

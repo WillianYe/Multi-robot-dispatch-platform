@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/open-rmf/rmf_api_msgs/main/rmf_api_msgs/schemas/activity_discovery_request.json",
+  "title": "Activity Discovery Request",
+  "description": "Ask for activities that can be performed by the fleets",
+  "type": "object",
+  "properties": {
+    "type": {
+      "description": "Indicate that this is an activity discovery request",
+      "type": "string",
+      "enum": ["activitiy_discovery_request"]
+    }
+  },
+  "required": ["type"]
+}
