@@ -15,6 +15,9 @@
 ### GUI和路线图
 <img width="700" src="https://github.com/WillianYe/Multi-intelligent-wheelchair/blob/main/img/img4.png" alt="GUI"/></div>
 <img width="700" src="https://github.com/WillianYe/Multi-intelligent-wheelchair/blob/main/img/img5.png" alt="路线图示例，可基于SLAM或设计图"/></div>
+
+以下gif加载可能需要一定时间。
+
 ### gazebo仿真
 <img width="700" src="https://github.com/WillianYe/Multi-intelligent-wheelchair/blob/main/img/img6.png"/></div>
 <img width="700" src="https://github.com/WillianYe/Multi-intelligent-wheelchair/blob/main/img/gif1.gif"/></div>
